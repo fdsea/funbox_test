@@ -1,6 +1,30 @@
-
 body
-	background: #FFF
-	+css-lock(16, 50, 600, 1000)
-	line-height: 1.4
+	font-family: Trebuchet MS, sans-serif
+	font-size: 16px
+	line-height: 1
+	+image('bg__pattern.jpg')
+	background-repeat: repeat
+
++font($title, "Exo2.0-Thin")
+
+.page__title
+	font-family: 'exo'
+	color: #fff
+	font-size: 36px
+	text-align: center
+	margin-top: 2.8em
+.cards__wrapper
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	max-width: 1120px
+	position: absolute
+	width: 100%
+	+r(1190)
+		padding: 0 1em
+	+r(1015)
+		justify-content: space-around
+.card:nth-child(2n+2)
+	margin-left: 1em
+	margin-right: 1em
 

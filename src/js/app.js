@@ -1,7 +1,5 @@
+import CardsThings from './scr/card.js';
 
-
-import testFunction from './scr/test.js';
-
-testFunction();
+new CardsThings();
 
 

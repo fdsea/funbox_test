@@ -1,0 +1,26 @@
+@mixin color_change($color)
+	.card__content
+		border-left-color: $color
+		border-bottom-color: $color
+		border-right-color: $color
+	.card__corner
+		border-left-color: $color
+		border-top-color: $color
+	.card__corner-right
+		border-right-color: $color
+		border-top-color: $color
+	.card__weight-info
+		background-color: $color
+@mixin color_change_hover($color)
+	&:hover .card__weight-info
+		background-color: $color
+	&:hover .card__content
+		border-left-color: $color
+		border-bottom-color: $color
+		border-right-color: $color
+	&:hover .card__corner
+		border-left-color: $color
+		border-top-color: $color
+	&:hover .card__corner-right
+		border-right-color: $color
+		border-top-color: $color

@@ -12,9 +12,79 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
-      <h1>Main page</h1>
-      <h1 class="card__header">This Card Component!</h1>
-      <a href="#" style="color: red">this is link component</a>
+      <h1 class="page__title">Ты сегодня покормил кота?</h1>
+      <div class="cards__wrapper">
+        <div class="card  " data-select="Печень утки разварная с артишоками.">
+          <div class="card__corner"></div>
+          <div class="card__corner-right"></div>
+          <p class="card__corner-label">Сказочное заморское яство</p>
+          <div class="card__content">
+            <h3 class="card__title">Нямушка</h3>
+            <h4 class="card__subtitle">с фуа-гра</h4>
+            <div class="card__additionalinfo-wrapper">
+              <p class="card__additionalinfo"><span class="card__additionalinfo-amount">10</span>порций</p>
+              <p class="card__additionalinfo">мышь в подарок</p>
+            </div>
+            <div class="card__img-wrapper">
+              <img src="../img/cat.jpg" alt="some-image" class="card__image" s>
+            </div>
+            <div class="card__weight-info">
+              <span class="card__weight-amount">0,5</span>
+              <span class="card__weight-dimension">кг</span>
+            </div>
+          </div>
+          <p class="card__default-info">Чего сидишь? Порадуй котэ, <a href="#" class="card__link">купи</a></p>
+          <p class="card__selected-info card--hide-info"></p>
+          <p class="card__disable-info card--hide-info">Печалька, <span></span> закончился</p>
+        </div>
+        <div class="card card--isActive " data-select="Головы щучьи с чесноком да свежайшая сёмгушка.">
+          <div class="card__corner"></div>
+          <div class="card__corner-right"></div>
+          <p class="card__corner-label">Сказочное заморское яство</p>
+          <div class="card__content">
+            <h3 class="card__title">Нямушка</h3>
+            <h4 class="card__subtitle">с рыбой</h4>
+            <div class="card__additionalinfo-wrapper">
+              <p class="card__additionalinfo"><span class="card__additionalinfo-amount">40</span>порций</p>
+              <p class="card__additionalinfo"><span class="card__additionalinfo-amount">2</span>мыши в подарок</p>
+            </div>
+            <div class="card__img-wrapper">
+              <img src="../img/cat.jpg" alt="some-image" class="card__image" s>
+            </div>
+            <div class="card__weight-info">
+              <span class="card__weight-amount">2</span>
+              <span class="card__weight-dimension">кг</span>
+            </div>
+          </div>
+          <p class="card__default-info">Чего сидишь? Порадуй котэ, <a href="#" class="card__link">купи</a></p>
+          <p class="card__selected-info card--hide-info"></p>
+          <p class="card__disable-info card--hide-info">Печалька, <span></span> закончился</p>
+        </div>
+        <div class="card  card--disabled" data-select="Филе из цыплят с трюфелями в бульоне.">
+          <div class="card__corner"></div>
+          <div class="card__corner-right"></div>
+          <p class="card__corner-label">Сказочное заморское яство</p>
+          <div class="card__content">
+            <h3 class="card__title">Нямушка</h3>
+            <h4 class="card__subtitle">с курой</h4>
+            <div class="card__additionalinfo-wrapper">
+              <p class="card__additionalinfo"><span class="card__additionalinfo-amount">100</span>порций</p>
+              <p class="card__additionalinfo"><span class="card__additionalinfo-amount">5</span>мышей в подарок</p>
+              <p class="card__additionalinfo">заказчик доволен</p>
+            </div>
+            <div class="card__img-wrapper">
+              <img src="../img/cat.jpg" alt="some-image" class="card__image" s>
+            </div>
+            <div class="card__weight-info">
+              <span class="card__weight-amount">5</span>
+              <span class="card__weight-dimension">кг</span>
+            </div>
+          </div>
+          <p class="card__default-info">Чего сидишь? Порадуй котэ, <a href="#" class="card__link">купи</a></p>
+          <p class="card__selected-info card--hide-info"></p>
+          <p class="card__disable-info card--hide-info">Печалька, <span></span> закончился</p>
+        </div>
+      </div>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->

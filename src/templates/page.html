@@ -2,25 +2,28 @@
 title: Main page
 ---
 {% extends "layouts/_layout.html" %}
- {% import "lnk/_lnk.html" as lnk %}
+{% import "card/_card.html" as card_item %}
+{% import "data/cards.html" as cards %}
 
 {% block content %}
-
-	{# variable example #}
-	<h1>{{title}}</h1>
-
-  {% include "card/_card.html" %}
-
-	{# partial example #}
- {#	{% include "partials/_header.html" %} #}
-
-	{# mixin example #}
- {#	{{mixins.icon('facebook')}} #}
-
-{{ lnk.content({
-    color: 'red'
-  })
-}}
+<h1 class="page__title">Ты сегодня покормил кота?</h1>
+<div class="cards__wrapper">
+  {% for card in cards.cards %}
+    {{ card_item.content({
+      disabled: card.disabled,
+      isActive: card.isActive,
+      select: card.select,
+      label: card.label,
+      card_title : card.card_title,
+      subtitle: card.subtitle,
+      add_info: card.add_info,
+      weight: card.weight,
+      dim: card.dim,
+      link: card.link,
+      img: card.img
+    }) }}
+  {% endfor %}
+</div>
 {# data usage example #}
 {#	{% import "data/data.html" as tests %}
 

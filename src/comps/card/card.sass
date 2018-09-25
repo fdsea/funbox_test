@@ -1,2 +1,157 @@
-.card__header
-	color: blue
+.card
+	padding-top: $lb_height
+	font-size: 16px
+	min-height: calc(480px - #{$lb_height})
+	background: transparent
+	position: relative
+	z-index: 1
+	max-width: $max_width
+	width: 100%
+	border: none
+	cursor: pointer
+	+color_change_hover($default_color_hover)
+	margin-bottom: 3em
+	&__corner
+		position: absolute
+		height: $lb_height
+		transform: skew(-45deg)
+		top: -$bw
+		left: -1px
+		width: calc(100% - 50px)
+		border-top: $bw solid $default_color
+		border-left: calc(#{$bw} + 1px) solid $default_color
+		transform-origin: 0 100%
+		border-bottom: none
+		background-color: #fff
+	&__corner-right
+		position: absolute
+		height: $lb_height
+		width: 50px
+		top: -$bw
+		right: 0
+		border-top: $bw solid $default_color
+		border-right: $bw solid $default_color
+		border-radius: 0 10px 0 0
+		background-color: #fff
+		overflow: hidden
+	&__corner-label
+		position: absolute
+		width: 100%
+		top: $lb_height / 2.5
+		margin: 0
+		padding: 0 0 0 calc(#{$pad_left} + 5px)
+		background-color: transparent
+		font-size: 1em
+		color: #999
+	&__content
+		height: 480px
+		overflow: hidden
+		position: relative
+		z-index: -2
+		border-radius: 0 0 10px 10px
+		border: $bw solid $default_color
+		width: 100%
+		border-top: none
+		box-sizing: border-box
+		top: -$bw
+		background-color: #fff
+		margin-bottom: 15px
+	&__title
+		font-size: 3em
+		padding-left: $pad_left
+		font-weight: bold
+		margin-top: 0.15em
+		margin-bottom: 0.1em
+	&__subtitle
+		font-size: 1.5em
+		padding-left: $pad_left
+		font-weight: bold
+		margin-bottom: 0.7em
+	&__additionalinfo-wrapper
+		padding-left: $pad_left
+		font-size: 14px
+	&__additionalinfo
+		color: #b9b9b9
+		font-size: 0.9em
+		margin-bottom: 2px
+	&__additionalinfo-amount
+		color: #a4a4a4
+		display: inline-block
+		margin-right: 5px
+		font-weight: bold
+	&__img-wrapper
+		display: block
+		position: absolute
+		bottom: 0px
+		overflow: hidden
+		height: 330px
+		width: 100%
+		background-color: #fff
+	&__image
+		display: block
+		position: absolute
+		top: 10%
+		left: 50%
+		transform: translate(-50%, 0)
+		width: 130%
+		height: auto
+	&__weight-info
+		position: absolute
+		bottom: 0.7em
+		right: 0.7em
+		width: 80px
+		height: 80px
+		background: $default_color
+		border-radius: 50%
+		color: #fff
+	&__weight-amount
+		font-size: 42px
+		text-align: center
+		display: block
+		margin-top: 0.3em
+	&__weight-dimension
+		font-size: 21px
+		text-align: center
+		display: block
+	&__default-info
+		color: #fff
+		font-size: 13px
+		text-align: center
+	&__link
+		color: $default_color
+		text-decoration: none
+		border-bottom: 1px dashed $default_color
+		font-size: 13px
+	&__selected-info
+		color: #fff
+		font-size: 13px
+		text-align: center
+	&__disable-info
+		color: $yellow
+		font-size: 13px
+		text-align: center
+	&--isActive
+		+color_change_hover($active_color_hover)
+		+color_change($active_color)
+	&--disabled
+		cursor: default
+		+color_change(#b3b3b3)
+		+color_change_hover(#b3b3b3)
+		.card__weight-info
+			background-color: #444
+		&:hover .card__weight-info
+			background-color: #444
+		.card__corner,
+		.card__corner-right,
+		.card__content
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				z-index: 100
+				background-color: rgba(#f2f2f2, 0.8)
+	&--hide-info
+		display: none
