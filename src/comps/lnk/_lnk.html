@@ -1,0 +1,7 @@
+
+{% macro content(s) %}
+
+{% set s = s or {} %}
+{% set _color = s.color or '' %}
+  <a href="#" style="color: {{_color}}" >this is link component</a>
+{% endmacro %}

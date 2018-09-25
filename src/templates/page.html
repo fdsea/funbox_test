@@ -1,0 +1,33 @@
+---
+title: Main page
+---
+{% extends "layouts/_layout.html" %}
+ {% import "lnk/_lnk.html" as lnk %}
+
+{% block content %}
+
+	{# variable example #}
+	<h1>{{title}}</h1>
+
+  {% include "card/_card.html" %}
+
+	{# partial example #}
+ {#	{% include "partials/_header.html" %} #}
+
+	{# mixin example #}
+ {#	{{mixins.icon('facebook')}} #}
+
+{{ lnk.content({
+    color: 'red'
+  })
+}}
+{# data usage example #}
+{#	{% import "data/data.html" as tests %}
+
+		{% for test in tests.list %}
+		<li>{{test.title}}</li>
+		{% endfor %}
+	{# end of example #}
+
+
+{% endblock %}
