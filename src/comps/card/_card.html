@@ -13,7 +13,7 @@
 {% set _link = s.link or '' %}
 {% set _img = s.img or '' %}
 
-<div class="card {{ _isActive }} {{ _isDisabled }}" data-select="{{ _select }}">
+<article class="card {{ _isActive }} {{ _isDisabled }}" data-select="{{ _select }}">
 	<div class="card__corner"></div>
 	<div class="card__corner-right"></div>
 	<p class="card__corner-label">{{  _corner_label }}</p>
@@ -36,7 +36,7 @@
 	<p class="card__default-info">Чего сидишь? Порадуй котэ, <a href="{{ _link }}" class="card__link">купи</a></p>
 	<p class="card__selected-info card--hide-info"></p>
 	<p class="card__disable-info card--hide-info">Печалька, <span></span> закончился</p>
-</div>
+</article>
 
 {% endmacro %}
 

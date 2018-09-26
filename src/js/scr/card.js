@@ -6,7 +6,7 @@ class CardsThings {
     this.setActiveClass();
   }
   setActiveClass() {
-    this.cards.forEach((card, i) => {
+    this.cards.forEach((card) => {
       card.addEventListener('click', () => {
         card.classList.toggle('card--isActive');
         if(card.classList.contains('card--disabled')) {
